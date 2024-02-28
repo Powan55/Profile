@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="https://kit.fontawesome.com/84344e10ff.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I'm <span>Laxmi</span> <br> From New York</h1>
+            </div>
+        </div>
+    </div>
+<!-----------------------------About ME--------------------------------->
+    <div class="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/2022CareerFair_Headshots_324.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I'm Laxmi Poudel, currently pursuing my Bachelor's degree in Software Engineering at Rochester Institute of Technology (RIT).
+                        With a diverse skill set encompassing Java, C++, Python, SQL, and more, I'm deeply passionate about crafting innovative solutions 
+                        in the digital landscape. In my academic journey, I've undertaken notable projects such as "FootWare," an intuitive e-store 
+                        catering to footwear aficionados, and "Trivial-Trivia," a captivating trivia game designed to entertain and engage. 
+                        My focus lies predominantly in backend development and system design, where I thrive on architecting efficient and 
+                        scalable solutions, leveraging my knowledge of design patterns to create robust software systems.
+                        <br>
+                        <br>
+                        Looking forward, my career aspirations center around leadership roles in software project management and beyond.
+                        I'm driven to channel my technical acumen and collaborative spirit into steering projects to success, ultimately
+                        aiming to ascend to the position of Software Manager. Beyond the realms of coding and software engineering, 
+                        I find solace in exploring new destinations, maintaining a healthy lifestyle through regular gym sessions, and 
+                        fostering bonds with friends through spirited soccer matches. I believe in the power of balance, blending professional growth
+                         with personal pursuits to lead a fulfilling life.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>Java, C++, C, Python, SQL, JavaScript</li>
+                            <li><span>Design Patterns</span><br>Using design patterns to create robust software systems</li>
+                            <li><span>UI/UX</span><br>Designing Web/APP interfaces</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>May 2025</span><br>I am a senior Software Engineering student at Rochester Institute of Technology (RIT).</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jan 2023 - Aug 2023</span><br>Software Engineering Co-op at Saab Inc.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   <!--------Services---------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Custom Software Development</h2>
+                    <p>
+                        Building tailored software solutions for businesses or 
+                        individuals according to their specific needs and requirements.
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-server"></i>
+                    <h2>Backend Development</h2>
+                    <p>
+                        Building the server-side logic and databases for web and mobile applications 
+                        using languages like Python or Java, along with frameworks like Spring Boot.
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-globe"></i>
+                    <h2>Web Development</h2>
+                    <p>
+                        Creating websites and web applications using various technologies such as HTML, CSS, JavaScript, and frameworks like React or Angular
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
