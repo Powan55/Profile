@@ -19,6 +19,7 @@ body{
     height: 100vh;
     background-image: url(images/bubbles-background-da0xbfyvtmf5l6bf.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
 }
 
